@@ -30,10 +30,10 @@ namespace ui {
 void Channel::paint(Painter& painter) {
 	const auto r = screen_rect();
 
-	constexpr int db_min = -96;
-	constexpr int db_max = 0;
+	constexpr int db_min = -9999; // changed from 96
+	constexpr int db_max = 30; // changed from 0
 	constexpr int db_delta = db_max - db_min;
-	const range_t<int> x_max_range { 0, r.width() - 1 };
+	const range_t<int> x_max_range { 0, r.width() - 3 }; // changed from one
 	const auto x_max = x_max_range.clip((max_db_ - db_min) * r.width() / db_delta);
 
 	const Rect r0 { r.left(), r.top(), x_max, r.height() };

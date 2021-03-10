@@ -134,7 +134,7 @@ void NumbersStationView::start_tx() {
 	transmitter_model.set_baseband_bandwidth(1750000);
 	transmitter_model.enable();
 	
-	baseband::set_audiotx_data(
+	baseband::set_rds_data(
 		(1536000 / 44100) - 1,		// TODO: Read wav file's samplerate
 		12000,
 		1,

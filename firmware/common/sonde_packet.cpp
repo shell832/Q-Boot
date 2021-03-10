@@ -23,7 +23,7 @@
 #include "sonde_packet.hpp"
 #include "string_format.hpp"
 #include <cstring>
-//#include <complex>
+#include <complex>
 
 namespace sonde {
 

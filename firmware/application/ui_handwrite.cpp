@@ -40,7 +40,9 @@ HandWriteView::HandWriteView(
 	NavigationView& nav,
 	std::string * str,
 	size_t max_length
-) : TextEntryView(nav, str, max_length)
+
+)   TextEntryView(ui::NavigationView&, std::string*, size_t)
+// ) : TextEntryView(nav, str, max_length)
 {
 	size_t n;
 	
@@ -215,7 +217,7 @@ void HandWriteView::guess_letter() {
 					char_add('A' + symbol - 1);
 				clear_zone(Color::green(), true);	// Green flash
 			} else {
-				if (_cursor_pos) {
+				if (cursor_pos) {
 					char_delete();
 					clear_zone(Color::yellow(), true);	// Yellow flash
 				} else {

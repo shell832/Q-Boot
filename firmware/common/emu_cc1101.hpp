@@ -23,8 +23,8 @@
 #ifndef __EMU_CC1101_H__
 #define __EMU_CC1101_H__
 
-#include <cstdint>
-#include <array>
+#include <stdint.h>
+// #include <array>
 
 #include "utility.hpp"
 
